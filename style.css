@@ -1,0 +1,297 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+  }
+  
+  .header {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .logo {
+    width: 50px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+   /*caja de busqueda header*/
+   .search-box {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .search-box input {
+    padding: 8px;
+  }
+
+  .search-box button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Add this line to create space between the input and button */
+    margin-top: 1%;
+  }
+  
+  /*slider*/
+  .slider-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 300px;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+  }
+  
+  .slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+  /*botones*/
+  .botones {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan a la siguiente línea en pantallas pequeñas */
+    justify-content: center; /* Centra los botones horizontalmente */
+    padding: 20px;
+}
+
+ button {
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+    width: 150px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  button:hover{
+    transition: 0.3s;
+    transform: scale(105%);
+    border: solid 1.5px purple;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  /*buscador inferior*/
+    .buscador{
+      margin: auto;
+      width: 90%;
+    }
+
+    #buscador{
+      width: 100%;
+      padding: 10px;
+      outline: none;
+      border: 5px solid #CCD1E4;
+  }
+
+  #buscador:hover{
+    border: 5px solid #a1adda;
+  }
+
+  /*seccion contenido*/
+  .seccion{
+    border-top: solid 3px purple;
+    border-bottom: solid 3px purple;
+    box-shadow: 0 -8px 10px -1px rgba(128, 0, 128, 0.5);
+    margin: auto;
+    text-align: center;
+  }
+
+  .productos{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-row-gap: 30px;
+  }
+
+
+  .articulo{
+    border: solid 1px black;
+    border-radius: 25px;
+    padding: 20px;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    transition: 0.5s;
+    background-color: white;
+  }
+
+  .articulo img{
+    border-radius: 10px;
+    width: 200px;
+  }
+
+  /*formulario*/
+  form{
+    background-color: #c3c1c1;
+    width: 30%;
+
+  }
+
+  /*display para buscador*/
+  .filtro {
+    display: none;
+}
+
+  /* Media queries para la responsividad */
+  @media only screen and (max-width: 375px) {
+    .header{
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .header nav{
+      font-size: 15px;
+    }
+
+    .header button{
+      width: 50%;
+    }
+
+    .header button:hover{
+      width: 50%;
+      transition: 0.3s;
+      transform: scale(105%);
+      border: solid 1.5px purple;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .productos{
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .buscador{
+      margin: auto;
+      width: 90%;
+    }
+  
+    #buscador{
+      width: 90%;
+      padding: 10px;
+      outline: none;
+      border: 5px solid #CCD1E4;
+    }
+ 
+    .botones{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    form{
+      background-color: #c3c1c1;
+      width: 80%;
+  
+    }
+  }
+
+
+  /* Dispositivos muy pequeños (Pantallas muy estrechas) */
+@media only screen and (max-width: 414px) {
+    .header {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .header nav{
+      font-size: 10px;
+    }
+  
+    .search-box{
+      width: 70%;
+    }
+
+    .search-box input{
+      width: 50%;
+    }
+
+    .search-box button{
+      width: 40%;
+    }
+
+    .buscador{
+      margin: auto;
+      width: 90%;
+    }
+  
+    #buscador{
+      width: 90%;
+      padding: 10px;
+      outline: none;
+      border: 5px solid #CCD1E4;
+    }
+
+    .productos{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  
+    /* Dispositivos pequeños (ej. teléfonos) */
+    @media only screen and (max-width: 768px) {
+      .productos{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* Dispositivos medianos (ej. tablets) */
+    @media only screen and (max-width: 768px) {
+      .productos {
+          grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    /* Dispositivos medianos (ej. tablets) */
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      .productos {
+          grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Dispositivos grandes (ej. computadoras de escritorio) */
+    @media only screen and (min-width: 1025px) {
+      .productos {
+          grid-template-columns: repeat(4, 1fr);
+      }
+    }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script style="text-align: justify"> //script que recoge los datos guardados del formulario y los imprime//
+        var nombre = localStorage.getItem("nombre");
+        var correo = localStorage.getItem("correo");
+        var tlf = localStorage.getItem("tlf");
+
+        document.write('Nombre: ' + nombre + '<br>');
+        document.write('Correo: ' + correo + '<br>');
+        document.write('Teléfono: ' + tlf + '<br>');
+    </script>
+</body>
+</html>

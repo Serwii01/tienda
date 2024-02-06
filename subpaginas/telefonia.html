@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <link rel="icon" href="../img/logo/logo.jfif" type="image/x-icon">
+    <link rel="icon" href="../img/logo/logo.jfif" sizes="16x16" type="image/jpg">
+    <link rel="icon" href="../img/logo/logo.jfif" sizes="32x32" type="image/jpg">
+    <link rel="icon" href="../img/logo/logo.jfif" sizes="48x48" type="image/jpg">
+</head>
+<body>
+    <div class="header">
+        <a href="../index.html"><img src="../img/logo/logo.jfif" alt="Logo" class="logo"></a>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#">FaQ</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Buscar" id="busca" list="lista">
+            <datalist id="lista">
+              <option value="Inicio"></option>
+              <option value="Ordenadores"></option>
+              <option value="Componentes"></option>
+              <option value="Periféricos"></option>
+            </datalist>
+            <button type="button" onclick="buscarcom()">Buscar</button>
+            <script>
+                function buscarcom() {
+  // Obtén el valor del input
+  const searchTerm = document.getElementById('busca').value;
+
+  // Realiza alguna acción con el término de búsqueda, por ejemplo, redirigir a la página correspondiente
+  switch (searchTerm.toLowerCase()) {
+      case 'ordenadores':
+          window.location.href = 'ordenadores.html';
+          break;
+      case 'inicio':
+          window.location.href = '../index.html';
+          break;
+      case 'periféricos':
+          window.location.href = 'perifericos.html';
+          break;
+      case 'componentes':
+          window.location.href = 'componentes.html';
+          break;
+      default:
+          alert('No se encontró ninguna coincidencia');
+  }
+}
+            </script>
+          </div>
+      </div><br><br><br><br><br><br>
+      <div class="buscador">
+        <input type="text" name="buscador" id="buscador" placeholder="Buscar en esta página">
+      </div><br><br>
+    <div class="seccion">
+      <h2>Componentes</h2>
+      <div class="productos">
+        <div class="articulo">
+          <img src="img/ordenadores/pc1.webp" alt="">
+          <h3><script>document.write(productos[0]);</script> - PC Ryzen</h3>
+          <p class="precios"></p>
+          <p class="disponibles">Disponible</p>
+          <button>Info</button>
+      </div>
+      <div class="articulo">
+        <img src="img/ordenadores/pc2.webp" alt="">
+        <h3><script>document.write(productos[0]);</script> - PC Intel</h3>
+        <p class="precios"></p>
+        <p class="disponibles">Disponible</p>
+        <button>Info</button>
+    </div>
+    <div class="articulo">
+      <img src="img/componentes/3070.webp" alt="">
+      <h3><script>document.write(productos[1]);</script> - RTX 3070</h3>
+      <p class="precios"></p>
+      <p class="disponibles">Disponible</p>
+      <button>Info</button>
+  </div>
+  <div class="articulo">
+    <img src="img/componentes/6700.webp" alt="">
+    <h3><script>document.write(productos[1]);</script> - RX 6700</h3>
+    <p class="precios"></p>
+    <p class="disponibles">Disponible</p>
+    <button>Info</button>
+</div>
+<div class="articulo">
+  <img src="img/perifericos/superlight.webp" alt="">
+  <h3><script>document.write(productos[2]);</script> - G PRO</h3>
+  <p class="precios"></p>
+  <p class="disponibles">Disponible</p>
+  <button>Info</button>
+</div>
+<div class="articulo">
+  <img src="img/telefonia/iphone14.webp" alt="">
+  <h3><script>document.write(productos[3]);</script> - Iphone 14</h3>
+  <p class="precios"></p>
+  <p class="disponibles">Disponible</p>
+  <button>Info</button>
+</div>
+    </div><br><br>
+    </div>
+</body>
+</html>
